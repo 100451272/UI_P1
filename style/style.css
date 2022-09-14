@@ -24,12 +24,18 @@ header {
     text-align: left;
     font-size: 15px;
     color: rgb(255, 255, 255);
+    font-family: monospace, "Lucida Console";
   }
 
 /* Menu */
+
+#menu {
+  background-color: rgb(165, 165, 165);
+  margin-top: 0;
+}
 ul {
   list-style-type: none;
-  margin-top: 5%;
+  margin-top: 0;
   padding: 0;
   width: 100%;
   background-color: #f1f1f1;
@@ -49,10 +55,12 @@ li a:hover {
   color: white;
 }
 
+
 #imgmenu {
-  width:20px;
-  margin-right: 10px;
+  width:15%;
+  margin-right: 5%
 }
+
 
 /*Login*/
 #login {
