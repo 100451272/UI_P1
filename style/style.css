@@ -11,6 +11,7 @@
 
 #up {
     background-color: #666;
+    height: 75px;
 }
 #logo {
     float:left;
@@ -38,7 +39,7 @@ ul {
   margin-top: 0;
   padding: 0;
   width: 100%;
-  background-color: #f1f1f1;
+  background-color: #888888;
 }
 
 li a {
@@ -61,19 +62,40 @@ li a:hover {
   margin-right: 5%
 }
 
+#blank {
+  height: 400px;
+}
 
+div::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#right {
+  float: left;
+  width: 75%;
+}
 /*Login*/
 #login {
-    float:left;
+    float:right;
     width: 10%;
     padding: 5px;
     text-align: center;
     font-size: 25px;
     margin-top: 1%;
+    background-color: #777;
+    border-color: #000;
+    border: solid 1px;
+}
+
+#login:hover {
+  background-color: #888888;
+  color:rgb(255, 255, 255);
 }
 
 #register {
-    float:left;
+    float:right;
     width: 10%;
     padding: 5px;
     text-align: center;
@@ -81,7 +103,16 @@ li a:hover {
     margin-right: 10%;
     margin-left: 5%;
     margin-top: 1%;
+    background-color: #777;
+    border-color: #000;
+    border: solid 1px;
 }
+
+#register:hover {
+  background-color: #888888;
+  color:rgb(255, 255, 255);
+}
+
 div::after {
     content: "";
     display: table;
@@ -104,15 +135,40 @@ div::after {
   }
   
   article {
-    float: left;
     padding: 20px;
-    width: 70%;
-    background-color: #f1f1f1;
-    height: 300px; /* only for demonstration, should be removed */
+    background-color: #252525;
+    text-align: center;
+  }
+
+  h1 {
+    color:rgb(255, 255, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  div.song {
+    margin-right: 5%;
+    border: 1px solid #ccc;
+    float: left;
+    width: 15%;
+    height: 320px;
+  }
+
+  div.song:hover {
+    border: 1px solid #777;
+  }
+
+  div.description {
+    padding: 5px;
+    text-align: center;
+    color:rgb(255, 255, 255)
   }
   
   /* Clear floats after the columns */
   section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  div::after {
     content: "";
     display: table;
     clear: both;
