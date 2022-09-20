@@ -6,7 +6,6 @@
 
 #left {
   float: left;
-  width: 25%;
 }
 
 #up {
@@ -15,12 +14,10 @@
 }
 #logo {
     float:left;
-    width: 15%;
     height: auto;
 }
 header {
     float: left;
-    width: 60%;
     padding-left: 15px;
     text-align: left;
     font-size: 15px;
@@ -38,7 +35,6 @@ ul {
   list-style-type: none;
   margin-top: 0;
   padding: 0;
-  width: 100%;
   background-color: #888888;
 }
 
@@ -58,7 +54,7 @@ li a:hover {
 
 
 #imgmenu {
-  width:15%;
+  width: 15%;
   margin-right: 5%
 }
 
@@ -74,12 +70,10 @@ div::after {
 
 #right {
   float: left;
-  width: 75%;
 }
 /*Login*/
 #login {
     float:right;
-    width: 10%;
     padding: 5px;
     text-align: center;
     font-size: 25px;
@@ -96,7 +90,6 @@ div::after {
 
 #register {
     float:right;
-    width: 10%;
     padding: 5px;
     text-align: center;
     font-size: 25px;
@@ -119,15 +112,6 @@ div::after {
     clear: both;
   }
   
-  /* Create two columns/boxes that floats next to each other */
-  nav {
-    float: left;
-    width: 30%;
-    height: 300px; /* only for demonstration, should be removed */
-    background: #ccc;
-    padding: 20px;
-  }
-  
   /* Style the list inside the menu */
   nav ul {
     list-style-type: none;
@@ -146,9 +130,9 @@ div::after {
   }
   div.song {
     margin-right: 5%;
+    margin-bottom: 10%;
     border: 1px solid #ccc;
     float: left;
-    width: 15%;
     height: 320px;
   }
 
@@ -187,10 +171,50 @@ div::after {
     bottom: 0;
   }
   
-  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-  @media (max-width: 600px) {
-    nav, article {
-      width: 100%;
-      height: auto;
-    }
+  @media only screen and (min-width: 600px) {
+    /*tablets*/
+    .col-s-1 {width: 5%;}
+    .col-s-2 {width: 10%;}
+    .col-s-3 {width: 15%;}
+    .col-s-4 {width: 20%;}
+    .col-s-5 {width: 25%;}
+    .col-s-6 {width: 30%;}
+    .col-s-7 {width: 35%;}
+    .col-s-8 {width: 40%;}
+    .col-s-9 {width: 45%;}
+    .col-s-10 {width: 50%;}
+    .col-s-11 {width: 55%;}
+    .col-s-12 {width: 60%;}
+    .col-s-13 {width: 65%;}
+    .col-s-14 {width: 70%;}
+    .col-s-15 {width: 75%;}
+    .col-s-16 {width: 80%;}
+    .col-s-17 {width: 85%;}
+    .col-s-18 {width: 90%;}
+    .col-s-19 {width: 95%;}
+    .col-s-20 {width: 100%;}
+  }
+
+  @media only screen and (min-width: 768px) {
+    /*Desktop*/
+    .col-1 {width: 5%;}
+    .col-2 {width: 10%;}
+    .col-3 {width: 15%;}
+    .col-4 {width: 20%;}
+    .col-5 {width: 25%;}
+    .col-6 {width: 30%;}
+    .col-7 {width: 35%;}
+    .col-8 {width: 40%;}
+    .col-9 {width: 45%;}
+    .col-10 {width: 50%;}
+    .col-11 {width: 55%;}
+    .col-12 {width: 60%;}
+    .col-13 {width: 65%;}
+    .col-14 {width: 70%;}
+    .col-15 {width: 75%;}
+    .col-16 {width: 80%;}
+    .col-17 {width: 85%;}
+    .col-18 {width: 90%;}
+    .col-19 {width: 95%;}
+    .col-20 {width: 100%;}
   }
