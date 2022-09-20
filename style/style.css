@@ -15,6 +15,7 @@
 #logo {
     float:left;
     height: auto;
+    width: 15%;
 }
 header {
     float: left;
@@ -128,19 +129,20 @@ div::after {
     color:rgb(255, 255, 255);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
-  div.song {
+  .song {
     margin-right: 5%;
-    margin-bottom: 10%;
+    margin-bottom: 1%;
     border: 1px solid #ccc;
     float: left;
-    height: 320px;
+    height: auto;
   }
 
   div.song:hover {
     border: 1px solid #777;
+    opacity: 75%;
   }
 
-  div.description {
+  .description {
     padding: 5px;
     text-align: center;
     color:rgb(255, 255, 255)
