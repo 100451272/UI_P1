@@ -5,15 +5,15 @@
 <title>Lightfy</title>
 <link rel="icon" type="image/x-icon" href="./images/logo.png">
 </head>
-  <div id="left">
+  <div id="left" class="col-5 col-s-20">
     <div id="up">
       <img id="logo" src="./images/logo.png">
-      <header>
+      <header class="col-12 col-s-12">
         <h2>LIGHTFY</h2>
       </header>
     </div>
     <div id="menu">
-      <ul>
+      <ul class="col-20 col-s-20">
         <li><a href="https://open.spotify.com/playlist/2eTyRpsuHg6YmA4TzeHEQo?si=a32be53cd6954ff2">
             <img id="imgmenu" src="./images/Portada lista spotify.jpg">REGGAETON HITS</a></li>
         <li><a href="https://open.spotify.com/playlist/1Oi9QM8DFQXcuAuXYhEuEv?si=1fa809bd66cc489f">
@@ -30,25 +30,29 @@
       </ul>
     </div>
   </div>
-  <div id="right">
+  <div id="right" class="col-15 col-s-20">
     <div id="up">
-      <button id="register">Sign In</button>
-      <button id="login">Log In</button>
+      <button id="register" class="col-2 col-s-2">Sign In</button>
+      <button id="login" class="col-2 col-s-2">Log In</button>
     </div>
     <div id="main">
       <article>
         <div id="row">
           <h1>TUS CANCIONES</h1>
-          <div class="song">
+          <div class="song col-3 col-s-9">
             <a target="_blank" href="https://open.spotify.com/track/0x6UyfOikAQ7GpiGaYaPey?si=7f659362906e41e1">
               <img src="./images/ella no sigue modas.jpeg" width="100%" height="auto"></a>
             <div class="description">
               <h3>Ella no sigue modas</h3>
               <h4>Juan Magan, Don Omar</h4>
-            </div></a>
+              <audio controls class="audio col-20 col-s-20">
+                <source src="./audio/Juan Magan - Ella No Sigue Modas.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+              </audio>
+            </div>
           </div>
 
-          <div class="song">
+          <div class="song col-3 col-s-9">
             <a target="_blank" href="https://open.spotify.com/track/79zvVrn65ksbiGQxrtV4I5?si=4e31b675589249d5">
               <img src="./images/guaya guaya.jpeg" width="100%" height="auto"></a>
             <div class="description">
@@ -57,7 +61,7 @@
             </div></a>
           </div>
           
-          <div class="song">
+          <div class="song col-3 col-s-9">
             <a target="_blank" href="https://open.spotify.com/track/5ildQOEKmJuWGl2vRkFdYc?si=a08a3058426b47a7">
               <img src="./images/despecha.jpeg" width="100%" height="auto"></a>
             <div class="description">
@@ -66,16 +70,16 @@
             </div></a>
           </div>
           
-          <div class="song">
+          <div class="song col-3 col-s-9">
             <a target="_blank" href="https://open.spotify.com/track/4aYd4OvURiE7jrnkdbwk0t?si=e9072987cafb4e92">
-              <img src="./images/llama del amor.jpeg" width="100%" height="auto"></a>
+              <img src="./images/la llama del amor.jpg" width="100%" height="auto"></a>
             <div class="description">
               <h3>La llama del amor</h3>
-              <h4>Omar Montes, Jairo deRemache</h4>
+              <h4>Omar Montes</h4>
             </div></a>
           </div>
           
-          <div class="song">
+          <div class="song col-3 col-s-9">
             <a target="_blank" href="https://open.spotify.com/track/4aYd4OvURiE7jrnkdbwk0t?si=e9072987cafb4e92">
               <img src="./images/pepa pig.jpeg" width="100%" height="auto"></a>
             <div class="description">
@@ -137,5 +141,5 @@
       </article>
     </div>
   </div>
-  <footer><h1>Sign In for UNLIMITED MUSIC</h1></footer>
+  <footer class="col-s-20 col-20"><h1>Sign In for UNLIMITED MUSIC</h1></footer>
 </html>
