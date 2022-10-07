@@ -4,15 +4,16 @@
         <meta charset="utf-8"><!--estándar en HTML5 reconocido por la RFC 3629 de la Internet Engineering Task Force (IETF) 
                                 y una de las tres posibilidades de codificación reconocidas por Unicode):-->
         <title>Login Form</title>
-        <link rel="stylesheet" href="./style/style_login.css">
+        <link rel="stylesheet" href="./style/style_register.css">
+        <script src="./script/Register.js"></script>
     </head>
     <body>
         <a href="music.html">
         <img src="./images/arrow_back_FILL0_wght700_GRAD0_opsz48.png" id="back">
         </a>
         <div class="centro">
-            <h1>Login</h1>
-            <form method="post"> <!--The HTML <form> method Attribute is used to 
+            <h1>Sign in</h1>
+            <form name="Reg" action="./music.html" onsubmit="return validar()"method="post"> <!--The HTML <form> method Attribute is used to 
                                     specify the HTTP method used to send data 
                                     while submitting the form. 
                                     There are two kinds of HTTP methods, 
@@ -22,27 +23,31 @@
                                     the address bar of the new browser tab as 
                                     it was visible in the GET method.-->
                 <div class="txt_field">
-                    <input type="text" required><!--input de texto OBLIGATORIO-->
+                    <input type="text" name="email" required>
+                    <span></span>
+                    <label>Email</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" name="username" required><!--input de texto OBLIGATORIO-->
                     <span></span><!--The <span> tag is an inline container used to mark up 
                                     a part of a text, or a part of a document.-->
                     <label>Username</label>
                 </div>
 
                 <div class="txt_field">
-                    <input type="password" required><!--El tipo 'password'
+                    <input type="password" name="password" required><!--El tipo 'password'
                                                         hace que aparezcan los
                                                         clásicos puntos al escribir
                                                         una contraseña-->
                     <span></span>
                     <label>Password</label>
                 </div>
-                <div class="pass">Forgot Password?</div>
-                <input type="submit" value="Login">
-                <button type="button">Login with Google</button>
-                <button type="button">Login with Facebook</button>
-                <div class="singup_link">
-                    Not a member? <a href="#">Singup</a>
+                <div class="txt_field">
+                    <input type="password" name="repeat" required>
+                    <span></span>
+                    <label>Repeat password</label>
                 </div>
+                <input type="submit" value="Sign in">
             </form>   
         </div>
 

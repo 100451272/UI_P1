@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: monospace, "Lucida Console";
+    background: linear-gradient(120deg, #2c3333, #395b64);
+    height: 100vh;
+    overflow: hidden;
+  }
+
+#back {
+    border-radius: 40px;
+    background-color: #ffffff;
+    margin: 1%;
+}
+
+/*Recuadro que contiene lo que es todo el formulario*/
+.centro{
+    position: absolute;/*Las propiedades top, right, bottom, y left 
+                        especifican el desplazamiento desde 
+                        los bordes del bloque contenedor del elemento.*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);/*recoloca un elemento en 
+                                    el eje horizontal y/o vertical.*/
+    width: 400px;/*El ancho del formulario*/
+    background: white;
+    border-radius: 10px; /*La curva de las esquinas*/
+}
+
+.centro h1{/*Login*/
+    text-align: center; /*texto centrado en el formulario*/
+    padding: 0 0 20px 0;/*Padding is used to create space around 
+                        an element's content, inside of any 
+                        defined borders.*/
+    border-bottom: 1px solid silver; /*Borde solo debajo, como subrayado*/
+}
+
+.centro form{
+    padding: 0 40px;
+    box-sizing: border-box; /*Es decir, si se define un elemento 
+                            con un ancho de 100 pixeles, 
+                            esos 100 pixeles incluíran cualquier 
+                            borde o relleno que se añadan, 
+                            y la caja de contenido se encogerá para 
+                            absorber ese ancho extra*/
+  }
+
+form .txt_field{
+    position: relative; /* relative to the normal position*/
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;/* forma reducida para establecer una o más de 
+                    las propiedades individuales de contorno*/
+}
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s; /*CSS transitions allows you to change 
+                        property values smoothly, over a given duration.*/
+}
+.txt_field span::before{ /*Añade contenido estético 
+                            (en este caso antes) usando
+                            el 'content'*/
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #395b64;
+    transition: .5s;
+}
+.txt_field input:focus ~ label, /*the second element follows the first 
+                                (though not necessarily immediately), 
+                                and both share the same parent. Syntax: A ~ B 
+                                Example: p ~ span will match all <span> elements that follow a <p>, 
+                                immediately or not.*/
+.txt_field input:valid ~ label{
+    top: -5px;
+    color: #395b64;
+}
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{/*select <input> elements that contain valid content, 
+                                        as determined by its type attribute*/
+    width: 100%;
+}
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+.pass:hover{
+    text-decoration: underline;
+}
+input[type="submit"]{ /*select elements based on the presence 
+                        of a certain attribute on an element:*/
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #064663;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 2%;
+}
+input[type="submit"]:hover{
+    border-color: #a5c9ca;
+    transition: .5s;
+}
+
+.singup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+.singup_link a{
+    color: #2c3333;
+    text-decoration: none;
+}
+.singup_link a:hover{
+    text-decoration: underline;
+}
