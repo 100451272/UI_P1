@@ -17,3 +17,8 @@ function checkPass(pass, repeat) {
     }
     return false;
 }
+
+function checkCookie(){
+    let user = getCookie("username");
+    alert(user);
+}
