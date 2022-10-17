@@ -1,3 +1,10 @@
+class profile{
+  constructor(name, profilepic = "default"){
+    this.name = name;
+    this.profilepic = profilepic;
+  }
+}
+
 function getCookie(cname) {
     let name = cname + "=";
     let ca = document.cookie.split('=');
@@ -7,12 +14,13 @@ function getCookie(cname) {
 
   function checkCookie() {
     let user = getCookie("username");
-    if (user != "") {
-      alert("Welcome again " + user);
-    } else {
-      user = prompt("Please enter your name:", "");
-      if (user != "" && user != null) {
-        setCookie("username", user, 365);
-      }
+    if (user = "") {
+      alert("Please register");
+      return 0;
     }
+    alert("Cookie encontrada");
+
+     
+
+
   }
