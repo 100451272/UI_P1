@@ -1,14 +1,15 @@
 
 function validar() {
-    let email = document.forms["Reg"]["email"].value;
-    let username = document.forms["Reg"]["username"].value;
-    let password = document.forms["Reg"]["password"].value;
-    let repeat = document.forms["Reg"]["repeat"].value;
+    let email = document.getElementById("email").value;
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let repeat = document.getElementById("repeat").value;
     comp = checkPass(password, repeat);
     const d = new Date();
     d.setTime(d.getTime() + (2 * 24 * 60 * 60 * 1000));
     let expires = "expires="+d.toUTCString();
-    document.cookie = username + "=" + password + ";" + expires + ";path=/";
+    document.cookie = "username" + "=" + username +"," + password + ";" + expires + ";path=/";
+    alert(email + username + password);
   }
 
 function checkPass(pass, repeat) {
@@ -16,9 +17,4 @@ function checkPass(pass, repeat) {
         return true;
     }
     return false;
-}
-
-function checkCookie(){
-    let user = getCookie("username");
-    alert(user);
 }
