@@ -1,0 +1,141 @@
+/*===VARIABLES GLOBALES===
+*que quiero que afecten a todo el documentoç
+*/
+ul li{
+    list-style: none;
+}
+ul li a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/*===BODY===
+*va en orden secuencialmente
+*según el HTML
+
+==HEADER==*/
+header{
+    background-color: #8fd6e1;
+
+}
+.row{
+    height: 100px;
+    align-items: center;
+}
+.col-1{
+    height: 100%;
+    min-width: 100px !important;
+    align-items: center;
+}
+#logo{
+    /*Imagen del logo
+    (falta curro aquí)*/
+    width: 75%;
+    min-width: 20%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+h1{
+    /*Título*/
+    font-family: Arial, Helvetica, sans-serif;
+    color:darkcyan;
+}
+.col{
+    /*Contiene los botones de registro*/
+    display: flex;
+}
+.col a{
+    /*Texto de dentro de los botones*/
+    color: white;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+.col button{
+    /*Botones de inicio de sesión/registro*/
+    width: 75%;
+    height: 150%;
+    border-radius: 8px;
+    background-color: darkcyan;
+    border: none;
+}
+
+
+/*==RESTO BODY==*/
+.row-1{
+    /*Simple fila de separación. Adorno*/
+    background-color: #025955;
+    height: 20px;
+}
+
+.contenedor-2{
+    /*Sección intermedia*/
+    display: flex;
+    float: left;
+}
+.col-3{
+    /*Seccion de la izquierda*/
+    background-color: #025955;
+}
+#imgmenu{
+    /*Imágenes de las canciones*/
+    border: 2px solid white;
+    width: 30%;
+    min-width: 30%;
+    margin-top: 5%;
+    margin-right: 2%;
+}
+
+.col-9{
+    background-color: #00917c;
+}
+.col-9 h2{
+    margin-top: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.row-5{
+    display: flex;
+}
+.col-9 ul{
+    display: flex;
+    margin-top: 20px;
+}
+.col-sm-2{
+    background-color: #4ecca3;
+    border-radius: 8px;
+    margin: 15px;
+}
+.col-sm-2 img{
+    border-radius: 8px;
+    margin-bottom: 5%;
+    border: 15px solid #dece9c;
+}
+h4, h6{
+    margin: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #5c5470;
+}
+.col-sm-12{
+    margin-top: 10%;
+}
+#imgdisplay{
+    width: 30%;
+    border: 2px solid white;
+} 
+.row-2{
+    /*background-color: #00917c;*/
+    background-color: #025955;
+
+}
+
+/*===FOOTER===*/
+.footer{
+    background-color: #323232;
+}
+.footer p{
+    color: white;
+}

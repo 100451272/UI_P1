@@ -5,14 +5,16 @@
                                 y una de las tres posibilidades de codificación reconocidas por Unicode):-->
         <title>Login Form</title>
         <link rel="stylesheet" href="./style/style_login.css">
+        <script src="./script/Login.js"></script>
+        <!--<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>-->
     </head>
     <body>
-        <a href="music.html">
+        <a href="music3.html">
         <img src="./images/arrow_back_FILL0_wght700_GRAD0_opsz48.png" id="back">
         </a>
         <div class="centro">
             <h1>Login</h1>
-            <form method="post"> <!--The HTML <form> method Attribute is used to 
+            <form method="post" name = "myForm"> <!--The HTML <form> method Attribute is used to 
                                     specify the HTTP method used to send data 
                                     while submitting the form. 
                                     There are two kinds of HTTP methods, 
@@ -22,14 +24,14 @@
                                     the address bar of the new browser tab as 
                                     it was visible in the GET method.-->
                 <div class="txt_field">
-                    <input type="text" required><!--input de texto OBLIGATORIO-->
+                    <input type="text" id="username" required><!--input de texto OBLIGATORIO-->
                     <span></span><!--The <span> tag is an inline container used to mark up 
                                     a part of a text, or a part of a document.-->
                     <label>Username</label>
                 </div>
 
                 <div class="txt_field">
-                    <input type="password" required><!--El tipo 'password'
+                    <input type="password" id = "password" required><!--El tipo 'password'
                                                         hace que aparezcan los
                                                         clásicos puntos al escribir
                                                         una contraseña-->
@@ -37,7 +39,7 @@
                     <label>Password</label>
                 </div>
                 <div class="pass">Forgot Password?</div>
-                <input type="submit" value="Login">
+                <button type="button" id="login" onclick="submit()">Submit</button>
                 <button type="button">Login with Google</button>
                 <button type="button">Login with Facebook</button>
                 <div class="singup_link">
@@ -45,6 +47,5 @@
                 </div>
             </form>   
         </div>
-
     </body>
 </html>
