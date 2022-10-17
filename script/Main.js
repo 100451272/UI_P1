@@ -20,7 +20,17 @@ function getCookie(cname) {
     }
     alert("Cookie encontrada");
 
-     
+    login = $("#login");
+    register = $("#register");
+
+    login.hide();
+    register.hide();
+
+    user = $("#userlog");
+    user.show();
+
+    username = $("#profilename")
+    username.text(user);
 
 
   }

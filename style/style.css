@@ -111,6 +111,17 @@ button a {
   color:rgb(255, 255, 255);
 }
 
+/*Profile*/
+#userlog {
+  display: none;
+  float: right;
+}
+
+#profilepic {
+  width: 15%;
+  float: right;
+}
+
 div::after {
     content: "";
     display: table;
