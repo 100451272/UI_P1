@@ -139,3 +139,51 @@ h4, h6{
 .footer p{
     color: white;
 }
+
+@media only screen and (min-width: 600px) {
+    /*tablets*/
+    .col-s-1 {width: 5%;}
+    .col-s-2 {width: 10%;}
+    .col-s-3 {width: 15%;}
+    .col-s-4 {width: 20%;}
+    .col-s-5 {width: 25%;}
+    .col-s-6 {width: 30%;}
+    .col-s-7 {width: 35%;}
+    .col-s-8 {width: 40%;}
+    .col-s-9 {width: 45%;}
+    .col-s-10 {width: 50%;}
+    .col-s-11 {width: 55%;}
+    .col-s-12 {width: 60%;}
+    .col-s-13 {width: 65%;}
+    .col-s-14 {width: 70%;}
+    .col-s-15 {width: 75%;}
+    .col-s-16 {width: 80%;}
+    .col-s-17 {width: 85%;}
+    .col-s-18 {width: 90%;}
+    .col-s-19 {width: 95%;}
+    .col-s-20 {width: 100%;}
+  }
+
+  @media only screen and (min-width: 768px) {
+    /*Desktop*/
+    .col-1 {width: 5%;}
+    .col-2 {width: 10%;}
+    .col-3 {width: 15%;}
+    .col-4 {width: 20%;}
+    .col-5 {width: 25%;}
+    .col-6 {width: 30%;}
+    .col-7 {width: 35%;}
+    .col-8 {width: 40%;}
+    .col-9 {width: 45%;}
+    .col-10 {width: 50%;}
+    .col-11 {width: 55%;}
+    .col-12 {width: 60%;}
+    .col-13 {width: 65%;}
+    .col-14 {width: 70%;}
+    .col-15 {width: 75%;}
+    .col-16 {width: 80%;}
+    .col-17 {width: 85%;}
+    .col-18 {width: 90%;}
+    .col-19 {width: 95%;}
+    .col-20 {width: 100%;}
+  }
