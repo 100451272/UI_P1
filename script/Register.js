@@ -1,14 +1,15 @@
 
-function validar(usuario, contrasena, expira) {
-    let email = document.forms["Reg"]["email"].value;
-    usuario = document.forms["Reg"]["username"].value;
-    password = document.forms["Reg"]["password"].value;
-    let repeat = document.forms["Reg"]["repeat"].value;
+function validar() {
+    let email = document.getElementById("email").value;
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let repeat = document.getElementById("repeat").value;
     comp = checkPass(password, repeat);
     const d = new Date();
     d.setTime(d.getTime() + (2 * 24 * 60 * 60 * 1000));
-    expira = "expires="+d.toUTCString();
-    document.cookie = usuario + "=" + contrasena + ";" + expira + ";path=/";
+    let expires = "expires="+d.toUTCString();
+    document.cookie = "username" + "=" + username +"," + password + ";" + expires + ";path=/";
+    alert(email + username + password);
   }
 
 function checkPass(pass, repeat) {
@@ -16,22 +17,4 @@ function checkPass(pass, repeat) {
         return true;
     }
     return false;
-}
-
-function checkCookie(){
-    let user = getCookie("username");
-    alert(user);
-}
-
-function getCookie(username){
-    let nombre = username + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    //to handle cookies with special characters, e.g. '$'
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i<ca.length; i++){
-        let c = ca[i];
-        while(c.charAt(0) == ' '){
-            c = c.substring(1);
-        }
-    }
 }
