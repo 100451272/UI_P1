@@ -11,13 +11,14 @@ function validar() {
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
     let repeat = document.getElementById("repeat").value;
-    comp = checkPass(password, repeat);
-    const d = new Date();
-    d.setTime(d.getTime() + (2 * 24 * 60 * 60 * 1000));
-    let expires = "expires="+d.toUTCString();
-    create_profile(username, password);
-    document.cookie = "username" + "=" + username +"," + password + ";" + expires + ";path=/";
-    alert(email + username + password);
+    if (!checkPass(password, repeat)){
+        alert("Las contraseñas no coinciden");
+        return 0;
+    }
+    //create_profile(username, password);
+    document.cookie = "username" + "=" + username +"," + password + ";path=/";
+    //alert(email + username + password);
+    window.location.href = "./music.html";
   }
 
 function checkPass(pass, repeat) {

@@ -115,11 +115,20 @@ button a {
 #userlog {
   display: none;
   float: right;
+  margin-right: 5%;
 }
 
 #profilepic {
-  width: 15%;
+  width: 13%;
   float: right;
+}
+
+#profilename {
+  font-size: 30px;
+  text-align: center;
+  float: right;
+  margin: 3%;
+  margin-top:2%;
 }
 
 div::after {
