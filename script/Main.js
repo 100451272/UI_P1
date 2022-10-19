@@ -36,3 +36,13 @@ function getCookie(cname) {
 
 
   }
+
+  function show_profile_menu() {
+    menu = $("#profilemenu");
+    menu.toggle();
+    
+  }
+
+  function signal(){
+    alert("I work");
+  }

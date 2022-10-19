@@ -7,6 +7,7 @@
 <title>Lightfy</title>
 <link rel="icon" type="image/x-icon" href="./images/logo.png">
 </head>
+<body onload="checkCookie()">
   <div id="left" class="col-5 col-s-20">
     <div id="up">
       <img id="logo" src="./images/logo.png">
@@ -14,7 +15,6 @@
         <h2>LIGHTFY</h2>
       </header>
     </div>
-    <body onload="checkCookie()">
         <div id="menu">
           <ul class="col-20 col-s-20">
             <li><a href="https://open.spotify.com/playlist/2eTyRpsuHg6YmA4TzeHEQo?si=a32be53cd6954ff2">
@@ -38,12 +38,25 @@
           <button id="register" class="col-2 col-s-2"><a id="signin" href=RegisterForm.html>Sign In</a></button>
           <button id="login" class="col-2 col-s-2"><a id="singin" href=LoginForm.html>Log In</a></button>
 
-          <div id="userlog">
+          <div class="col-4 col-s-4" id="userlog"><a onclick="show_profile_menu()">
             <p id="profilename"></p>
             <img id="profilepic" src="./images/logo.png">
-          </div>
+          </a></div>
         </div>
         <div id="main">
+          <div id="profilemenu">
+            <ul id="profileul">
+              <li><a href="#cuenta">
+                CUENTA
+              </a></li>
+              <li><a href="#perfil">
+                PERFIL
+              </a></li>
+              <li><a href="#logout">
+                LOG OUT
+              </a></li>
+            </ul>
+          </div>
           <article>
             <div id="row">
               <h1>TUS CANCIONES</h1>
