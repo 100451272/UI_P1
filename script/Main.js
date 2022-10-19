@@ -28,11 +28,18 @@ function getCookie(cname) {
     login.hide();
     register.hide();
 
+    $("footer").hide();
+
     user = $("#userlog");
     user.show();
 
     username = $("#profilename");
     username.text(profilename);
+
+    pic = "./images/profile/" + profilename + ".png";
+    console.log(pic);
+    userphoto = $("#profilepic");
+    userphoto.attr("src", pic);
 
 
   }
