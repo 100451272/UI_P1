@@ -17,7 +17,7 @@ function validar() {
     }
     //create_profile(username, password);
     document.cookie = "username" + "=" + username +"," + password + ";path=/";
-    //alert(email + username + password);
+    document.cookie = "Logged=True";
     window.location.href = "./music.html";
   }
 
