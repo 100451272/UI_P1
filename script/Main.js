@@ -6,11 +6,18 @@ class profile{
 }
 
 function getCookie(cname) {
-    console.log(document.cookie);
-    const ca = document.cookie.split('=');
-    const cookie = ca[1].split(',');
-    const cookie_res = cookie[0].split(';');
-    return cookie_res;
+    //console.log(document.cookie);
+    //Dividir en las dos cookies
+    const c = document.cookie.split(';');
+    //coger la info de Logged
+    const log = c[0].split('=');
+    //console.log(log);
+    let logged = log[1];
+    //coger la info de user
+    const usr = c[1].split('=');
+    const user_info = usr[1].split(',');
+    let name = user_info[0];
+    return [logged, name];
   }
 
   function checkCookie() {
