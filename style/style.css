@@ -113,6 +113,54 @@ button a {
   color:rgb(255, 255, 255);
 }
 
+/*Profile-------------------------------------------------*/
+#userlog {
+  display: none;
+  float: right;
+  height: 100%;
+  margin-right: 5%;
+  border:#000 solid;
+  border-radius: 10px;
+}
+
+#userlog:hover {
+  border:#ccc solid;
+}
+
+#profilepic {
+  width: 20%;
+  float: right;
+  margin-top: 2%;
+}
+
+#profilename {
+  font-size: 30px;
+  width: 70%;
+  text-align: right;
+  float: right;
+  margin: 3%;
+  margin-top:5%;
+  padding-right: 20%;
+}
+
+#profilemenu {
+  position: absolute;
+  z-index: 2;
+  display: none;
+  float: right;
+  margin-right: 4%;
+  right: 0%;
+  width: 15%;
+}
+
+#profileul {
+  list-style-type: none;
+  margin-top: 0;
+  padding: 0;
+  background-color: #888888;
+}
+
+/*fin nuevo----------------------------------------*/
 div::after {
     content: "";
     display: table;
@@ -136,6 +184,7 @@ div::after {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
   .song {
+    z-index: 1;
     margin-right: 5%;
     margin-bottom: 1%;
     border: 1px solid #ccc;
