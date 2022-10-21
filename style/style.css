@@ -29,6 +29,7 @@ header {
 /* Menu */
 
 #menu {
+  border: 2px solid red;
   background-color: rgb(165, 165, 165);
   margin-top: 0;
 }
@@ -70,6 +71,7 @@ div::after {
 }
 
 #right {
+  border: 2px solid red;
   float: left;
 }
 /*Login*/
