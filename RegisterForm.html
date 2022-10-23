@@ -12,7 +12,6 @@
         <a href="music.html">
         <img src="./images/arrow_back_FILL0_wght700_GRAD0_opsz48.png" id="back">
         </a>
-        <button type="button" onclick="check()">Check</button>
         <div class="centro">
             <h1>Sign in</h1>
             <form name="Reg" action="./music.html" onsubmit="return validar()"method="post"> <!--The HTML <form> method Attribute is used to 
@@ -25,7 +24,7 @@
                                     the address bar of the new browser tab as 
                                     it was visible in the GET method.-->
                 <div class="txt_field">
-                    <input type="text" id="email" required>
+                    <input type="email" id="email" required>
                     <span></span>
                     <label>Email</label>
                 </div>
@@ -34,6 +33,16 @@
                     <span></span><!--The <span> tag is an inline container used to mark up 
                                     a part of a text, or a part of a document.-->
                     <label>Username</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" id="name" required>
+                    <span></span>
+                    <label>Name and surname</label>
+                </div>
+                <div class="txt_field">
+                    <input type="date" id="birth" required>
+                    <span></span>
+                    <label></label>
                 </div>
 
                 <div class="txt_field">
@@ -49,7 +58,9 @@
                     <span></span>
                     <label>Repeat password</label>
                 </div>
-                <input type="button" value="Sign in" onclick="validar()">
+
+                <div><input type="checkbox" id="terms" value="Accept Terms" required><h4>Aceptar Términos</h4></div>
+                <input type="submit" value="Sign in" onclick="validar()">
             </form>   
         </div>
 

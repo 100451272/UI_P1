@@ -6,16 +6,30 @@ class profile{
 }
 
 function getCookie(cname) {
-    console.log(document.cookie);
-    const ca = document.cookie.split('=');
-    const user = ca[1].split(',');
-    console.log(user[0]);
-    return user[0];
+    //console.log(document.cookie);
+    //Dividir en las dos cookies
+    const c = document.cookie.split(';');
+    //coger la info de Logged
+    const log = c[0].split('=');
+    //console.log(log);
+    let logged = log[1];
+    //coger la info de user
+    const usr = c[1].split('=');
+    const user_info = usr[1].split(',');
+    let name = user_info[0];
+    return [logged, name];
   }
 
   function checkCookie() {
-    let profilename = getCookie("username");
-    console.log(profilename);
+    let cookie_res = getCookie("Logged");
+    console.log(cookie_res);
+    let logged = cookie_res[0];
+    if (logged != "True"){
+      //alert("Please register");
+      return 0;
+    }
+    //console.log(profilename);
+    let profilename = cookie_res[1];
     if (profilename == "") {
       alert("Please register");
       return 0;
@@ -35,6 +49,7 @@ function getCookie(cname) {
 
     username = $("#profilename");
     username.text(profilename);
+    profilename = profilename.replace(/\s+/g, "");
 
     pic = "./images/profile/" + profilename + ".png";
     console.log(pic);
@@ -48,6 +63,11 @@ function getCookie(cname) {
     menu = $("#profilemenu");
     menu.toggle();
     
+  }
+
+  function logout() {
+    document.cookie = "Logged=False";
+    window.location.href = "./music.html";
   }
 
   function signal(){

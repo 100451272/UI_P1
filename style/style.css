@@ -3,7 +3,9 @@
 * {
     box-sizing: border-box;
 }
-
+body {
+  background-color: #666;
+}
 #left {
   float: left;
 }
@@ -150,7 +152,7 @@ button a {
   float: right;
   margin-right: 4%;
   right: 0%;
-  width: 15%;
+  
 }
 
 #profileul {
