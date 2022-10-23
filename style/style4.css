@@ -41,6 +41,7 @@ h1{
     /*Título*/
     font-family: Arial, Helvetica, sans-serif;
     color:darkcyan;
+    /*margin-left: 40%;*/
 }
 .col{
     /*Contiene los botones de registro*/
@@ -71,16 +72,15 @@ h1{
 }
 
 .contenedor-2{
-    /*Sección intermedia*/
+    /*Sección intermedia donde están 
+    tanto el menu izquierdo como 
+    el derecho*/
     display: flex;
     float: left;
 }
-/*.col-5 col-s-20{
-    /*Seccion de la izquierda
-    background-color: #025955;
-}*/
+
 #left{
-    /*Seccion de la izquierda*/
+    /*Seccion del menu de la izquierda*/
     background-color: #025955;
 }
 #imgmenu{
@@ -93,27 +93,36 @@ h1{
 }
 
 #right{
+    /*Seccion del menu de la derecha*/
     background-color: #00917c;
     float: right;
 }
 #right h2{
     margin-top: 10px;
-    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: aquamarine;
+    border-radius: 4px;
+    width: 40%;
+    margin-left: 30%;
+    text-align: center;
 }
+
 .row-5{
+    /*Filas que contienen las canciones*/
     display: flex;
 }
 #right ul{
+    /**/
     display: flex;
     margin-top: 20px;
 }
-.col-sm-2{
+#cancion{
+    /*Cada cancion*/
     background-color: #4ecca3;
     border-radius: 8px;
     margin: 15px;
 }
-.col-sm-2 img{
+#cancion img{
     border-radius: 8px;
     margin-bottom: 5%;
     border: 15px solid #dece9c;
@@ -124,9 +133,11 @@ h4, h6{
     text-align: center;
     color: #5c5470;
 }
-.col-sm-12{
+.col-sm-11{
     margin-top: 10%;
+    margin-left: 5%;
 }
+
 #imgdisplay{
     width: 30%;
     border: 2px solid white;
