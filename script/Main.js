@@ -68,6 +68,10 @@ function getCookie() {
     
   }
 
+  function show_modal(){
+    $(".modal").css("display", "flex");
+  }
+
   function logout() {
     let cookie = getCookie();
     cookie[4] = "NotLogged";
