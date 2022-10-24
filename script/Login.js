@@ -1,29 +1,48 @@
 
-function getCookie(cname) {
+function getCookie() {
     //console.log(document.cookie);
-    //Dividir en las dos cookies
     const c = document.cookie.split(';');
-    //coger la info de Logged
-    const log = c[0].split('=');
-    //console.log(log);
-    let logged = log[1];
-    //coger la info de user
-    const usr = c[1].split('=');
-    const user_info = usr[1].split(',');
-    let name = user_info[0];
-    let password = user_info[1];
-    return [logged, name, password];
+    for (x=0;x<c.length; x++){
+      const usr = c[x].split('=');
+      const usr_info = usr[1].split(',');
+      //console.log(usr_info);
+      if (usr_info[4] == "NotLogged"){
+        console.log(usr_info[0]);
+        return usr_info;
+      }
+    }
+    return "";
+  }
+
+  function saveCookie(username, user_info) {
+    const c = document.cookie.split(';');
+    for (x=0;x<c.length; x++){
+      const usr = c[x].split('=');
+      const usr_info = usr[1].split(',');
+      //console.log(usr_info);
+      if (usr_info[0] == username){
+        console.log(usr_info[0]);
+        user_info_join = user_info.join(',');
+        usr_join = usr[0] + '=' + user_info_join + ';path=/';
+        document.cookie = usr_join;
+        return 1;
+      }
+    }
+    return 0;
   }
 
 function validar(){
     let in_username = document.getElementById("username").value;
     let in_password = document.getElementById("password").value;
-    let cookie_res = getCookie("Logged");
+    let user_info = getCookie();
     console.log(in_username);
 
-    if (in_username == cookie_res[1] && in_password == cookie_res[2]){
-        document.cookie = "Logged=True";
-        window.location.href = "./music3.html";
+    if (in_username == user_info[0] && in_password == user_info[1]){
+        user_info[4] = "Logged";
+        if (!saveCookie(user_info[0], user_info)){
+            alert("Error");
+        }
+        window.location.href = "./music.html";
     }
     else {
         alert("Credenciales incorrectas");

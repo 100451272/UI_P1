@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Account</title>
+        <link rel="stylesheet" href="./style/style_account.css">
+        <script src="./script/Account.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body onload="getInfo()">
+        <a href="music.html">
+            <img src="./images/arrow_back_FILL0_wght700_GRAD0_opsz48.png" id="back">
+        </a>
+        <div class="centro">
+            <h1>Personal Info</h1>
+            <div class="txt_field">
+                <h3>Email:</h3>
+                <input type="email" name="email">
+            </div>
+            <div class="txt_field">
+                <h3>Username:</h3>
+                <input type="text" name="username">
+            </div>
+            <div class="txt_field">
+                <h3>Name:</h3>
+                <input type="text" name="name">
+            </div>
+            <div class="txt_field">
+                <h3>birth:</h3>
+                <input type="date" name="birth">
+            </div>
+            <div class="txt_field">
+                <h3>Pasword:</h3>
+                <input type="password" name="password">
+            </div>
+            <input type="button" value="Save Info" onclick="saveCookie()">
+        </div>
+    </body>
+</html>
