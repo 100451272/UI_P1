@@ -1,0 +1,16 @@
+#set-1{
+    border: 2px solid red;
+}
+#set-2{
+    border: 2px solid red;
+}
+
+#listas{
+    display: flex;
+    list-style: none;
+}
+
+#imgmenu{
+    width: 30%;
+}
+

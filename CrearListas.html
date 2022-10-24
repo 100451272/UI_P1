@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"><!--estándar en HTML5 reconocido por la RFC 3629 de la Internet Engineering Task Force (IETF) 
+                                y una de las tres posibilidades de codificación reconocidas por Unicode):-->
+        <title>Login Form</title>
+        <link rel="stylesheet" href="./style/style_register.css">
+        <script src="./script/Register.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <a href="music.html">
+        <img src="./images/arrow_back_FILL0_wght700_GRAD0_opsz48.png" id="back">
+        </a>
+        <div class="centro">
+            <h1>Sign in</h1>
+            <form name="Reg" action="./music.html" onsubmit="return validar()"method="post"> <!--The HTML <form> method Attribute is used to 
+                                    specify the HTTP method used to send data 
+                                    while submitting the form. 
+                                    There are two kinds of HTTP methods, 
+                                    which are GET and POST.
+                                    In the post method, after the submission of the form, 
+                                    the form values will not be visible in 
+                                    the address bar of the new browser tab as 
+                                    it was visible in the GET method.-->
+                <div class="txt_field">
+                    <input type="email" id="email" required>
+                    <span></span>
+                    <label>Email</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" id="username" required><!--input de texto OBLIGATORIO-->
+                    <span></span><!--The <span> tag is an inline container used to mark up 
+                                    a part of a text, or a part of a document.-->
+                    <label>Username</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" id="name" required>
+                    <span></span>
+                    <label>Name and surname</label>
+                </div>
+                <div class="txt_field">
+                    <input type="date" id="birth" required>
+                    <span></span>
+                    <label></label>
+                </div>
+
+                <div class="txt_field">
+                    <input type="password" id="password" required><!--El tipo 'password'
+                                                        hace que aparezcan los
+                                                        clásicos puntos al escribir
+                                                        una contraseña-->
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" id="repeat" required>
+                    <span></span>
+                    <label>Repeat password</label>
+                </div>
+
+                <div><input type="checkbox" id="terms" required><h4>Aceptar Términos</h4></div>
+                <input type="submit" value="Sign in" onclick="validar()">
+            </form>   
+        </div>
+
+    </body>
+</html>
