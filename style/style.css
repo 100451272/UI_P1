@@ -71,7 +71,7 @@ div::after {
   clear: both;
 }
 
-#right {
+#right {  
   float: left;
 }
 /*Login*/
