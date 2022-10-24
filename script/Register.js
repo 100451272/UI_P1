@@ -22,10 +22,13 @@ function validar() {
       alert("Todos los campos son obligatorios");
       return 0;
     }
-    check_email(email);
+    if (check_email(email) == 0){
+      alert("email no válido");
+      return 0;
+    }
     //create_profile(username, password);
-    document.cookie = "username" + "=" + username +"," + password + "," + ";path=/";
-    document.cookie = "Logged=True"
+    document.cookie = email + "=" + username +"," + password + "," + name + "," + 
+                       birth + "," + "Logged;path=/";
     window.location.href = "./music.html";
   }
 
@@ -37,7 +40,15 @@ function checkPass(pass, repeat) {
 }
 
 function check_email(email) {
-  
+  console.log("email");
+    let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+    if (!regex.test(email)){
+      return 0;
+    }
+    console.log(document.cookie);
+    if (document.cookie == email){
+      return 0;
+    }
 }
 
 function create_profile(name, password){

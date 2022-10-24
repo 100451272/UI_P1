@@ -5,36 +5,40 @@ class profile{
   }
 }
 
-function getCookie(cname) {
-    //console.log(document.cookie);
-    //Dividir en las dos cookies
+function getCookie() {
     const c = document.cookie.split(';');
-    //coger la info de Logged
-    const log = c[0].split('=');
-    //console.log(log);
-    let logged = log[1];
-    //coger la info de user
-    const usr = c[1].split('=');
-    const user_info = usr[1].split(',');
-    let name = user_info[0];
-    return [logged, name];
+    for (x=0;x<c.length; x++){
+      const usr = c[x].split('=');
+      const usr_info = usr[1].split(',');
+      if (usr_info[4] == "Logged"){
+        return usr_info;
+      }
+    }
+    return "";
+  }
+
+  function saveCookie(username, user_info) {
+
+    const c = document.cookie.split(';');
+    for (x=0;x<c.length; x++){
+      const usr = c[x].split('=');
+      const usr_info = usr[1].split(',');
+      if (usr_info[0] == username){
+        user_info_join = user_info.join(',');
+        usr_join = usr[0] + '=' + user_info_join + ';path=/';
+        document.cookie = usr_join;
+        return 1;
+      }
+    }
+    return 0;
   }
 
   function checkCookie() {
-    let cookie_res = getCookie("Logged");
-    console.log(cookie_res);
-    let logged = cookie_res[0];
-    if (logged != "True"){
-      //alert("Please register");
+    let cookie = getCookie();
+    if (cookie == "") {
       return 0;
     }
-    //console.log(profilename);
-    let profilename = cookie_res[1];
-    if (profilename == "") {
-      alert("Please register");
-      return 0;
-    }
-    //alert("Cookie encontrada");
+    let profilename = cookie[0];
 
     login = $("#login");
     register = $("#register");
@@ -52,7 +56,6 @@ function getCookie(cname) {
     profilename = profilename.replace(/\s+/g, "");
 
     pic = "./images/profile/" + profilename + ".png";
-    console.log(pic);
     userphoto = $("#profilepic");
     userphoto.attr("src", pic);
 
@@ -66,7 +69,11 @@ function getCookie(cname) {
   }
 
   function logout() {
-    document.cookie = "Logged=False";
+    let cookie = getCookie();
+    cookie[4] = "NotLogged";
+    if (!saveCookie(cookie[0], cookie)){
+      alert("Error");
+    }
     window.location.href = "./music.html";
   }
 
