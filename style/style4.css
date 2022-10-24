@@ -26,7 +26,7 @@ header{
 }
 .col-1{
     height: 100%;
-    min-width: 100px !important;
+    /*min-width: 100px !important;*/
     align-items: center;
 }
 #logo{
@@ -56,7 +56,7 @@ h1{
 }
 .col button{
     /*Botones de inicio de sesión/registro*/
-    width: 75%;
+    /*width: 75%;*/
     height: 150%;
     border-radius: 8px;
     background-color: darkcyan;
@@ -96,6 +96,7 @@ h1{
     /*Seccion del menu de la derecha*/
     background-color: #00917c;
     float: right;
+    border: 2px solid red;
 }
 #right h2{
     margin-top: 10px;
