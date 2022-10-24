@@ -13,12 +13,13 @@ function validar() {
     let birth = document.getElementById("birth").value;
     let password = document.getElementById("password").value;
     let repeat = document.getElementById("repeat").value;
-    let terms = document.getElementById("terms").value;
+    let terms = document.getElementById("terms");
+    console.log(terms);
     if (!checkPass(password, repeat)){
         alert("Las contraseñas no coinciden");
         return 0;
     }
-    if (email == "" || username == "" || name == "" || birth == "" || password == "" || !terms){
+    if (email == "" || username == "" || name == "" || birth == "" || password == "" || !terms.checked){
       alert("Todos los campos son obligatorios");
       return 0;
     }
@@ -46,9 +47,15 @@ function check_email(email) {
       return 0;
     }
     console.log(document.cookie);
-    if (document.cookie == email){
-      return 0;
+    const c = document.cookie.split(';');
+    for (x=0;x<c.length; x++){
+      const usr = c[x].split('=');
+      console.log(usr)
+      if (usr[0] == email){
+        return 0;
+      }
     }
+    return 1;
 }
 
 function create_profile(name, password){
