@@ -24,6 +24,7 @@ function getCookie(cname) {
     let cookie_res = getCookie("Logged");
     console.log(cookie_res);
     let logged = cookie_res[0];
+    console.log(logged)
     if (logged != "True"){
       //alert("Please register");
       return 0;

@@ -23,7 +23,7 @@ function validar(){
 
     if (in_username == cookie_res[1] && in_password == cookie_res[2]){
         document.cookie = "Logged=True";
-        window.location.href = "./music.html";
+        window.location.href = "./music3.html";
     }
     else {
         alert("Credenciales incorrectas");
