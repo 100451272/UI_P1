@@ -13,19 +13,23 @@ function validar() {
     let birth = document.getElementById("birth").value;
     let password = document.getElementById("password").value;
     let repeat = document.getElementById("repeat").value;
-    let terms = document.getElementById("terms").value;
+    let terms = document.getElementById("terms");
+    console.log(terms);
     if (!checkPass(password, repeat)){
         alert("Las contraseñas no coinciden");
         return 0;
     }
-    if (email == "" || username == "" || name == "" || birth == "" || password == "" || !terms){
+    if (email == "" || username == "" || name == "" || birth == "" || password == "" || !terms.checked){
       alert("Todos los campos son obligatorios");
       return 0;
     }
-    check_email(email);
+    if (check_email(email) == 0){
+      alert("email no válido");
+      return 0;
+    }
     //create_profile(username, password);
-    document.cookie = "username" + "=" + username +"," + password + "," + ";path=/";
-    document.cookie = "Logged=True"
+    document.cookie = email + "=" + username +"," + password + "," + name + "," + 
+                       birth + "," + "Logged;path=/";
     window.location.href = "./music.html";
   }
 
@@ -37,7 +41,21 @@ function checkPass(pass, repeat) {
 }
 
 function check_email(email) {
-  
+  console.log("email");
+    let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+    if (!regex.test(email)){
+      return 0;
+    }
+    console.log(document.cookie);
+    const c = document.cookie.split(';');
+    for (x=0;x<c.length; x++){
+      const usr = c[x].split('=');
+      console.log(usr)
+      if (usr[0] == email){
+        return 0;
+      }
+    }
+    return 1;
 }
 
 function create_profile(name, password){
