@@ -8,12 +8,12 @@
 <link rel="icon" type="image/x-icon" href="./images/logo.png">
 </head>
 <body onload="checkCookie()">
-  <!--<section class="modal">
+  <section class="modal">
     <div class="contenido_modal">
       <h2 class="texto_modal">¿Desea Cerrar Sesión?</h2>
-      <a href="#" class="aceptar"><p id="si">Sí</p></a>
+      <a class="aceptar" onclick="logout()">Aceptar</a>
     </div>
-  </section>-->
+  </section>
   <div id="left" class="col-5 col-s-20">
     <div id="up">
       <img id="logo" src="./images/logo.png">
@@ -58,7 +58,7 @@
               <li><a href="#perfil">
                 PERFIL
               </a></li>
-              <li><a onclick="logout()">
+              <li><a onclick="show_modal()">
                 LOG OUT
               </a></li>
             </ul>
