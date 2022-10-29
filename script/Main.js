@@ -35,20 +35,26 @@ function getCookie() {
 
   function checkCookie() {
     let cookie = getCookie();
-    let infoLogged = cookie[4]
-    linkListas = $("#link-listas");
-    linkCrearListas = $("#link-crear-listas");
-    if (cookie == "" || infoLogged == "NotLogged") {
-      linkListas.hide();
-      linkCrearListas.hide();
+    //let infoLogged = cookie[4]
+    //linkListas = $("#link-listas");
+    //linkCrearListas = $("#link-crear-listas");
+    //if (cookie == "" || infoLogged == "NotLogged") {
+    //  linkListas.hide();
+    //  linkCrearListas.hide();
+    //  return 0;
+    //}
+    if(cookie == ""){
       return 0;
     }
     let profilename = cookie[0];
 
     login = $("#login");
     register = $("#register");
+    linkListas = $("#link-listas");
+    linkCrearListas = $("#link-crear-listas");
     
-
+    linkListas.show();
+    linkCrearListas.show();
     login.hide();
     register.hide();
 
