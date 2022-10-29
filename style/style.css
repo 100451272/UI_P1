@@ -14,6 +14,12 @@ body {
     background-color: #666;
     height: 75px;
 }
+#search{  
+  border-radius: 8px;
+  height: 30px;
+  width: 200px;
+}
+
 #logo {
     float:left;
     height: auto;
@@ -74,6 +80,8 @@ div::after {
 #right {  
   float: left;
 }
+
+
 /*Login*/
 #login {
     float:right;
