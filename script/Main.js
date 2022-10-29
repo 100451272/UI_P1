@@ -35,16 +35,26 @@ function getCookie() {
 
   function checkCookie() {
     let cookie = getCookie();
-    if (cookie == "") {
+    let infoLogged = cookie[4]
+    linkListas = $("#link-listas");
+    linkCrearListas = $("#link-crear-listas");
+    if (cookie == "" || infoLogged == "NotLogged") {
+      linkListas.hide();
+      linkCrearListas.hide();
       return 0;
     }
     let profilename = cookie[0];
 
     login = $("#login");
     register = $("#register");
+    
 
     login.hide();
     register.hide();
+
+    //if(cookie[4] == "Logged"){
+    //  linkListas.show();
+    //}
 
     $("footer").hide();
 
@@ -58,9 +68,10 @@ function getCookie() {
     pic = "./images/profile/" + profilename + ".png";
     userphoto = $("#profilepic");
     userphoto.attr("src", pic);
-
-
   }
+
+
+
 
   function show_profile_menu() {
     menu = $("#profilemenu");
@@ -77,7 +88,7 @@ function getCookie() {
     cookie[4] = "NotLogged";
     if (!saveCookie(cookie[0], cookie)){
       alert("Error");
-    }
+    }    
     window.location.href = "./music.html";
   }
 
