@@ -55,6 +55,8 @@ function getCookie() {
     user = $("#userlog");
     user.show();
 
+    $("#search").show();
+
     username = $("#profilename");
     username.text(profilename);
     profilename = profilename.replace(/\s+/g, "");
@@ -84,12 +86,19 @@ function getCookie() {
   }
 
   function search_song(){
-    let srch = document.getElementById("search").value;
+    let srch = document.getElementById("search_bar").value;
     console.log(srch);
     srch = srch.replace(/\s+/g, "");
     let song = $('#'+srch);
     song.show();
     console.log(song);
+  }
+
+  function playSong(song){
+    let path = "./audio_js/" + song + ".mp3";
+    var audio = new Audio(path);
+    audio.play;
+    console.log(path);
   }
 
   function signal(){

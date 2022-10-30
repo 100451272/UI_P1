@@ -170,11 +170,15 @@ button a {
   background-color: #888888;
 }
 
-#search{  
+#search{
+  float: left;
+  margin-top: 3%;
+  display: none;
+}
+#search_bar{  
   border-radius: 8px;
   height: 30px;
   width: 200px;
-  margin-top: 3%;
   padding-bottom: 0%;
 }
 
@@ -186,6 +190,14 @@ button a {
 
 .s_song {
   height: 50px;
+  border: #000 solid;
+  display: block;
+}
+
+.lisong:hover{
+  height: 50px;
+  border: rgb(255, 255, 255) solid;
+  color: #000;
 }
 
 .s_song h4 {
