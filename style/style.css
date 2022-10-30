@@ -14,11 +14,6 @@ body {
     background-color: #666;
     height: 75px;
 }
-#search{  
-  border-radius: 8px;
-  height: 30px;
-  width: 200px;
-}
 
 #logo {
     float:left;
@@ -175,6 +170,68 @@ button a {
   background-color: #888888;
 }
 
+#search{  
+  border-radius: 8px;
+  height: 30px;
+  width: 200px;
+  margin-top: 3%;
+  padding-bottom: 0%;
+}
+
+#search_list {
+  float:left;
+  position: absolute;
+  z-index: 2;
+}
+
+.s_song {
+  height: 50px;
+}
+
+.s_song h4 {
+  font-size: 20px;
+  padding: 0%;
+  margin-top: 5px;
+}
+
+/*Style for sonng list*/
+#ellanosiguemodas{
+  display: none;
+}
+
+#guaya{
+  display: none;
+}
+
+#despecha{
+  display: none;
+}
+#lallamadelamor{
+  display: none;
+}
+#pepapig{
+  display: none;
+}
+
+#beggin{
+  display: none;
+}
+
+#whatalife{
+  display: none;
+}
+
+#rapgod{
+  display: none;
+}
+
+#acapulco{
+  display: none;
+}
+
+#aunquediganqueyo{
+  display: none;
+}
 .modal {
   position: fixed;
   top: 0;

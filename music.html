@@ -45,9 +45,9 @@
       <div id="right" class="col-15 col-s-20">
         <div id="up">
           <input id="search" type="text" placeholder="Cancion/Artista/...">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+          <a onclick="search_song()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-          </svg>
+          </svg></a>
           <button id="register" class="col-2 col-s-2"><a id="signin" href=RegisterForm.html>Sign In</a></button>
           <button id="login" class="col-2 col-s-2"><a id="singin" href=LoginForm.html>Log In</a></button>
 
@@ -68,6 +68,40 @@
               <li><a onclick="show_modal()">
                 LOG OUT
               </a></li>
+            </ul>
+          </div>
+          <div id="search_list">
+            <ul>
+              <li class="s_song" id="ellanosiguemodas">
+                <a onclick="playSong('Ella No Sigue Modas')"><h4>Ella No Sigue Modas</h4></a>
+              </li>
+              <li class="s_song" id="guaya">
+                <a onclick="playSong('Guaya Guaya')"><h4>Guaya Guaya</h4></a>
+              </li>
+              <li class="s_song" id="despecha">
+                <a onclick="playSong('Despechá')"><h4>Despechá</h4></a>
+              </li>
+              <li class="s_song" id="lallamadelamor">
+                <a onclick="playSong('La llama del amor')"><h4>La llama del amor</h4></a>
+              </li>
+              <li class="s_song" id="pepapig">
+                <a onclick="playSong('Pepa Pig')"><h4>Pepa Pig</h4></a>
+              </li>
+              <li class="s_song" id="beggin">
+                <a onclick="playSong('Beggin')"><h4>Beggin'</h4></a>
+              </li>
+              <li class="s_song" id="whatalife">
+                <a onclick="playSong('What a life')"><h4>Ella No Sigue Modas</h4></a>
+              </li>
+              <li class="s_song" id="rapgod">
+                <a onclick="playSong('Rap God')"><h4>Rap God</h4></a>
+              </li>
+              <li class="s_song" id="acapulco">
+                <a onclick="playSong('Acapulco')"><h4>Acapulco</h4></a>
+              </li>
+              <li class="s_song" id="aunquediganqueyo">
+                <a onclick="playSong('Aunque digan que yo')"><h4>Aunque Digan Que Yo</h4></a>
+              </li>
             </ul>
           </div>
           <article>

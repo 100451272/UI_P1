@@ -35,14 +35,6 @@ function getCookie() {
 
   function checkCookie() {
     let cookie = getCookie();
-    //let infoLogged = cookie[4]
-    //linkListas = $("#link-listas");
-    //linkCrearListas = $("#link-crear-listas");
-    //if (cookie == "" || infoLogged == "NotLogged") {
-    //  linkListas.hide();
-    //  linkCrearListas.hide();
-    //  return 0;
-    //}
     if(cookie == ""){
       return 0;
     }
@@ -58,10 +50,6 @@ function getCookie() {
     login.hide();
     register.hide();
 
-    //if(cookie[4] == "Logged"){
-    //  linkListas.show();
-    //}
-
     $("footer").hide();
 
     user = $("#userlog");
@@ -75,9 +63,6 @@ function getCookie() {
     userphoto = $("#profilepic");
     userphoto.attr("src", pic);
   }
-
-
-
 
   function show_profile_menu() {
     menu = $("#profilemenu");
@@ -96,6 +81,15 @@ function getCookie() {
       alert("Error");
     }    
     window.location.href = "./music.html";
+  }
+
+  function search_song(){
+    let srch = document.getElementById("search").value;
+    console.log(srch);
+    srch = srch.replace(/\s+/g, "");
+    let song = $('#'+srch);
+    song.show();
+    console.log(song);
   }
 
   function signal(){
