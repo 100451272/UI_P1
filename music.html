@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="./style/style.css">
     <script src="./script/Main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<title>Lightfy</title>
+    <title>Lightfy</title>
 <link rel="icon" type="image/x-icon" href="./images/logo.png">
 </head>
 <body onload="checkCookie()">
@@ -31,9 +31,9 @@
                 <img id= "imgmenu" src="./images/bassboosted.jpeg">BASS BOOSTED</a></li>
             <li><a href="https://open.spotify.com/playlist/3LFIBdP7eZXJKqf3guepZ1?si=1e15a28c45484d2a">
                 <img id="imgmenu" src="./images/lofifruits.jpeg">LOFI FRUITS MUSIC</a></li>
-            <li><a href="./Listas.html">Tus Listas</a></li>
+            <li><a id="link-listas" href="./Listas.html">Tus Listas</a></li>
             <br>
-            <li><a href="./CrearListas.html">Crear Lista</a></li>
+            <li><a id="link-crear-listas" href="./CrearListas.html">Crear Lista</a></li>
           </ul>
           <p id="blank"></p>
           <ul>
@@ -44,11 +44,10 @@
       </div>
       <div id="right" class="col-15 col-s-20">
         <div id="up">
-          <div class="search">
-            <h3>Search:</h3>
-            <input type="text" id="searchbar">
-            <input type="button" value="search" onclick=""></button>
-          </div>
+          <input id="search" type="text" placeholder="Cancion/Artista/...">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
           <button id="register" class="col-2 col-s-2"><a id="signin" href=RegisterForm.html>Sign In</a></button>
           <button id="login" class="col-2 col-s-2"><a id="singin" href=LoginForm.html>Log In</a></button>
 

@@ -14,6 +14,12 @@ body {
     background-color: #666;
     height: 75px;
 }
+#search{  
+  border-radius: 8px;
+  height: 30px;
+  width: 200px;
+}
+
 #logo {
     float:left;
     height: auto;
@@ -61,6 +67,13 @@ li a:hover {
   margin-right: 5%
 }
 
+#link-listas{
+  display: none;
+}
+#link-crear-listas{
+  display: none;
+}
+
 #blank {
   height: 400px;
 }
@@ -74,6 +87,8 @@ div::after {
 #right {  
   float: left;
 }
+
+
 /*Login*/
 #login {
     float:right;
