@@ -131,6 +131,7 @@ button a {
   margin-right: 5%;
   border:#000 solid;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 #userlog:hover {
@@ -168,6 +169,7 @@ button a {
   margin-top: 0;
   padding: 0;
   background-color: #888888;
+  cursor: pointer;
 }
 
 #search{
@@ -204,6 +206,7 @@ button a {
   font-size: 20px;
   padding: 0%;
   margin-top: 5px;
+  cursor: pointer;
 }
 
 /*Style for sonng list*/
@@ -285,6 +288,7 @@ button a {
 .aceptar:hover{
   color: rgb(201, 201, 201);
   background-color: #111111;
+  cursor: pointer;
 }
 
 #titulo {
@@ -326,6 +330,7 @@ div::after {
     color:rgb(255, 255, 255);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
+
   .song {
     z-index: 1;
     margin-right: 5%;
@@ -338,6 +343,7 @@ div::after {
   div.song:hover {
     border: 1px solid #777;
     opacity: 75%;
+    cursor: pointer;
   }
 
   .description {

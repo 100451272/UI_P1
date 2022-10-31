@@ -5,6 +5,7 @@ Parte 2:
 - Apartado de cuenta para cambiar los datos de la cuenta registrada.
 - Opción de logout con ventana modal de confirmación.
 - Barra de búsqueda de canciones.
-  -> Solo están disponibles las canciones que aparecen en la pantalla principal
-  -> Se necesita introducir el nombre completo de la canción
-- Reproductor unificado en la parte de abajo para mejor control de las canciones
+  -> Solo están disponibles las canciones que aparecen en la pantalla principal.
+  -> Se necesita introducir el nombre completo de la canción.
+- Reproductor unificado en la parte de abajo para mejor control de las canciones.
+  -> No es posible reproducir canciones si no se está logeado.

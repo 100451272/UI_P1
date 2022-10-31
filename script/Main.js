@@ -95,6 +95,11 @@ function getCookie() {
   }
 
   function playSong(song, artist){
+    let cookie = getCookie();
+    if(cookie == ""){
+      alert("Please Sing In or Log In to play any song");
+      return 0;
+    }
     let path = "./audio_js/" + song + ".mp3";
     let reproductor = $("#reproductor");
     reproductor.attr("src", path)[0];
