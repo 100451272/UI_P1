@@ -50,10 +50,12 @@ function getCookie() {
     login.hide();
     register.hide();
 
-    $("footer").hide();
+    $("#footer").hide();
 
     user = $("#userlog");
     user.show();
+
+    $("#search").show();
 
     username = $("#profilename");
     username.text(profilename);
@@ -63,9 +65,6 @@ function getCookie() {
     userphoto = $("#profilepic");
     userphoto.attr("src", pic);
   }
-
-
-
 
   function show_profile_menu() {
     menu = $("#profilemenu");
@@ -84,6 +83,28 @@ function getCookie() {
       alert("Error");
     }    
     window.location.href = "./music.html";
+  }
+
+  function search_song(){
+    let srch = document.getElementById("search_bar").value;
+    console.log(srch);
+    srch = srch.replace(/\s+/g, "");
+    let song = $('#'+srch);
+    song.show();
+    console.log(song);
+  }
+
+  function playSong(song, artist){
+    let cookie = getCookie();
+    if(cookie == ""){
+      alert("Please Sing In or Log In to play any song");
+      return 0;
+    }
+    let path = "./audio_js/" + song + ".mp3";
+    let reproductor = $("#reproductor");
+    reproductor.attr("src", path)[0];
+    document.getElementById("titulo").innerHTML = song;
+    document.getElementById("artista").innerHTML = artist;
   }
 
   function signal(){

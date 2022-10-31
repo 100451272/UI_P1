@@ -14,11 +14,6 @@ body {
     background-color: #666;
     height: 75px;
 }
-#search{  
-  border-radius: 8px;
-  height: 30px;
-  width: 200px;
-}
 
 #logo {
     float:left;
@@ -136,6 +131,7 @@ button a {
   margin-right: 5%;
   border:#000 solid;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 #userlog:hover {
@@ -173,8 +169,84 @@ button a {
   margin-top: 0;
   padding: 0;
   background-color: #888888;
+  cursor: pointer;
 }
 
+#search{
+  float: left;
+  margin-top: 3%;
+  display: none;
+}
+#search_bar{  
+  border-radius: 8px;
+  height: 30px;
+  width: 200px;
+  padding-bottom: 0%;
+}
+
+#search_list {
+  float:left;
+  position: absolute;
+  z-index: 2;
+}
+
+.s_song {
+  height: 50px;
+  border: #000 solid;
+  display: block;
+}
+
+.lisong:hover{
+  height: 50px;
+  border: rgb(255, 255, 255) solid;
+  color: #000;
+}
+
+.s_song h4 {
+  font-size: 20px;
+  padding: 0%;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+/*Style for sonng list*/
+#ellanosiguemodas{
+  display: none;
+}
+
+#guaya{
+  display: none;
+}
+
+#despecha{
+  display: none;
+}
+#lallamadelamor{
+  display: none;
+}
+#pepapig{
+  display: none;
+}
+
+#beggin{
+  display: none;
+}
+
+#whatalife{
+  display: none;
+}
+
+#rapgod{
+  display: none;
+}
+
+#acapulco{
+  display: none;
+}
+
+#aunquediganqueyo{
+  display: none;
+}
 .modal {
   position: fixed;
   top: 0;
@@ -216,6 +288,23 @@ button a {
 .aceptar:hover{
   color: rgb(201, 201, 201);
   background-color: #111111;
+  cursor: pointer;
+}
+
+#titulo {
+  color: #000;
+  margin: 1%;
+  padding: 0%;
+  float: left;
+  width: 45%;
+}
+
+#artista {
+  color: #000;
+  margin: 1%;
+  padding: 0%;
+  float: left;
+  width: 45%;
 }
 
 /*fin nuevo----------------------------------------*/
@@ -241,6 +330,7 @@ div::after {
     color:rgb(255, 255, 255);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
+
   .song {
     z-index: 1;
     margin-right: 5%;
@@ -253,6 +343,7 @@ div::after {
   div.song:hover {
     border: 1px solid #777;
     opacity: 75%;
+    cursor: pointer;
   }
 
   .description {
@@ -281,7 +372,6 @@ div::after {
   footer {
     height: 10%;
     background-color: #777;
-    padding: 10px;
     text-align: center;
     color: white;
     position: fixed;
