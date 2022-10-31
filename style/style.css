@@ -287,6 +287,22 @@ button a {
   background-color: #111111;
 }
 
+#titulo {
+  color: #000;
+  margin: 1%;
+  padding: 0%;
+  float: left;
+  width: 45%;
+}
+
+#artista {
+  color: #000;
+  margin: 1%;
+  padding: 0%;
+  float: left;
+  width: 45%;
+}
+
 /*fin nuevo----------------------------------------*/
 div::after {
     content: "";
@@ -350,7 +366,6 @@ div::after {
   footer {
     height: 10%;
     background-color: #777;
-    padding: 10px;
     text-align: center;
     color: white;
     position: fixed;

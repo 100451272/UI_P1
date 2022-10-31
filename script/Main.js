@@ -94,10 +94,12 @@ function getCookie() {
     console.log(song);
   }
 
-  function playSong(song){
+  function playSong(song, artist){
     let path = "./audio_js/" + song + ".mp3";
     let reproductor = $("#reproductor");
     reproductor.attr("src", path)[0];
+    document.getElementById("titulo").innerHTML = song;
+    document.getElementById("artista").innerHTML = artist;
   }
 
   function signal(){
