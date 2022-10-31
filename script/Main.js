@@ -35,14 +35,6 @@ function getCookie() {
 
   function checkCookie() {
     let cookie = getCookie();
-    //let infoLogged = cookie[4]
-    //linkListas = $("#link-listas");
-    //linkCrearListas = $("#link-crear-listas");
-    //if (cookie == "" || infoLogged == "NotLogged") {
-    //  linkListas.hide();
-    //  linkCrearListas.hide();
-    //  return 0;
-    //}
     if(cookie == ""){
       return 0;
     }
@@ -57,10 +49,6 @@ function getCookie() {
     linkCrearListas.show();
     login.hide();
     register.hide();
-
-    //if(cookie[4] == "Logged"){
-    //  linkListas.show();
-    //}
 
     $("footer").hide();
 
