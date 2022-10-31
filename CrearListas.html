@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Creacion Lista</title>
         <link rel="stylesheet" href="./style/style_listas_form.css">
-        <script src="./script/Register.js"></script>
+        <script src="./script/crearLista.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
@@ -13,7 +13,7 @@
         </a>
         <div class="centro">
             <h1>Crear Lista</h1>
-            <form name="Reg" action="./music.html" onsubmit="return validar()"method="post">
+            <form name="Reg" action="./music.html" onsubmit="createList()" method="post">
                 <div class="txt_field">
                     <input type="text" id="titulo" required>
                     <span></span>
@@ -24,9 +24,9 @@
                 </div>
                 <br>
                 <div>
-                    <input type="checkbox" id="privacidad" required><h4>Hacer esta lista privada</h4>
+                    <input type="checkbox" id="privacidad"><h4>Hacer esta lista privada</h4>
                 </div>
-                <input type="submit" value="Crear">
+                <input type="submit" value="Crear" onclick="createList()">
             </form>   
         </div>
 

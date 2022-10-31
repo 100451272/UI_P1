@@ -9,3 +9,6 @@ Parte 2:
   -> Se necesita introducir el nombre completo de la canción.
 - Reproductor unificado en la parte de abajo para mejor control de las canciones.
   -> No es posible reproducir canciones si no se está logeado.
+- Nueva ventana de listas creadas por el usuario 
+- Nuevo formulario de creación de listas
+- Nueva página de perfil

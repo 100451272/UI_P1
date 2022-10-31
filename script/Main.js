@@ -44,9 +44,11 @@ function getCookie() {
     register = $("#register");
     linkListas = $("#link-listas");
     linkCrearListas = $("#link-crear-listas");
+    searchBar = $("#search_bar");
     
     linkListas.show();
     linkCrearListas.show();
+    searchBar.show();
     login.hide();
     register.hide();
 
