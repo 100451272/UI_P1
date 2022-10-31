@@ -50,7 +50,7 @@ function getCookie() {
     login.hide();
     register.hide();
 
-    $("footer").hide();
+    $("#footer").hide();
 
     user = $("#userlog");
     user.show();
@@ -96,9 +96,8 @@ function getCookie() {
 
   function playSong(song){
     let path = "./audio_js/" + song + ".mp3";
-    var audio = new Audio(path);
-    audio.play;
-    console.log(path);
+    let reproductor = $("#reproductor");
+    reproductor.attr("src", path)[0];
   }
 
   function signal(){
